@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
+
 import Home from "./pages/Home";
 import MajorPage from "./pages/MajorPage";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
+
 import "./styles/global.css";
 
 function App() {
@@ -56,6 +59,7 @@ function App() {
         <Header navigate={navigate} />
         <Home navigate={navigate} />
         <Footer />
+        <Analytics />
       </>
     );
   }
@@ -68,6 +72,7 @@ function App() {
         <MajorPage navigate={navigate} majorId={pathParts[1]} />
 
         <Footer />
+        <Analytics />
       </>
     );
   }
@@ -103,6 +108,7 @@ function App() {
       </main>
 
       <Footer />
+      <Analytics />
     </>
   );
 }
