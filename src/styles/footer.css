@@ -267,3 +267,32 @@
     font-size: 7px;
   }
 }
+
+.footer-credit {
+  width: min(820px, 100%);
+
+  margin: 16px auto 0;
+
+  padding-top: 10px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+
+  color: rgba(230, 167, 53, 0.72);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 0.6px;
+
+  text-align: center;
+
+  transition:
+    color 0.18s ease,
+    opacity 0.18s ease;
+}
+
+.footer-credit:hover {
+  color: var(--accent);
+}
