@@ -8,16 +8,32 @@ import "./styles/global.css";
 function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  };
+
   const navigate = (path) => {
     window.history.pushState({}, "", path);
     setCurrentPath(path);
-    window.scrollTo(0, 0);
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        scrollToTop();
+      });
+    });
   };
 
   useEffect(() => {
     const handlePopState = () => {
       setCurrentPath(window.location.pathname);
-      window.scrollTo(0, 0);
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          scrollToTop();
+        });
+      });
     };
 
     window.addEventListener("popstate", handlePopState);
