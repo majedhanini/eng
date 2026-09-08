@@ -49,6 +49,19 @@ function Home({ navigate }) {
             الأساسية وكل ما يساعد طلبة كلية الهندسة في بداية مشوارهم الجامعي.
           </p>
 
+          <div className="groups-update-note">
+            <div className="groups-update-note-icon">!</div>
+
+            <div className="groups-update-note-content">
+              <strong>تنويه بخصوص جروبات المساقات</strong>
+
+              <p>
+                يتم تحديث وتجديد روابط جروبات المساقات مع بداية كل فصل دراسي،
+                لضمان وصول الطلبة إلى الجروبات المحدثة والفعّالة.
+              </p>
+            </div>
+          </div>
+
           <a
             className="guidance-button"
             href={engineeringData.guidanceGroup.url}
@@ -56,9 +69,32 @@ function Home({ navigate }) {
             rel="noopener noreferrer"
           >
             <span>إرشاد دفعة 126</span>
-
             <span className="guidance-arrow">↗</span>
           </a>
+        </div>
+      </section>
+
+      {/* UNIVERSITY REQUIRED ENTRY */}
+      <section className="university-entry-section" id="university-required">
+        <div className="container">
+          <button
+            type="button"
+            className="university-entry-card"
+            onClick={() => navigate("/university-required")}
+          >
+            <div className="university-entry-content">
+              <span>UNIVERSITY REQUIRED COURSES</span>
+
+              <h2>إجباري جامعة</h2>
+
+              <p>
+                ادخل للوصول إلى جروبات المساقات الإجبارية المشتركة لطلبة
+                الجامعة.
+              </p>
+            </div>
+
+            <div className="university-entry-arrow">←</div>
+          </button>
         </div>
       </section>
 

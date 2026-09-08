@@ -3,6 +3,8 @@ import { Analytics } from "@vercel/analytics/react";
 
 import Home from "./pages/Home";
 import MajorPage from "./pages/MajorPage";
+import UniversityRequired from "./pages/UniversityRequired";
+
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 
@@ -64,6 +66,17 @@ function App() {
     );
   }
 
+  if (cleanPath === "/university-required") {
+    return (
+      <>
+        <Header navigate={navigate} />
+        <UniversityRequired navigate={navigate} />
+        <Footer />
+        <Analytics />
+      </>
+    );
+  }
+
   if (pathParts.length === 2 && pathParts[0] === "major") {
     return (
       <>
@@ -82,6 +95,7 @@ function App() {
       <Header navigate={navigate} />
 
       <main
+        dir="rtl"
         style={{
           minHeight: "100vh",
           display: "grid",

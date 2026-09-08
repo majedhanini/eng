@@ -75,6 +75,71 @@ const engineeringData = {
     url: "https://chat.whatsapp.com/KLWJrcdS437EYfnut48vOO?s=cl&p=i&mlu=4",
   },
 
+  universityRequired: [
+    {
+      id: "arabic-language",
+      name: "اللغة العربية",
+      englishName: "Arabic Language",
+      url: "",
+    },
+
+    {
+      id: "remedial-english",
+      name: "اللغة الإنجليزية الاستدراكية",
+      englishName: "Remedial English",
+      url: "",
+    },
+
+    {
+      id: "english-1",
+      name: "اللغة الإنجليزية 1",
+      englishName: "English Language 1",
+      url: "",
+    },
+
+    {
+      id: "english-2",
+      name: "اللغة الإنجليزية 2",
+      englishName: "English Language 2",
+      url: "",
+    },
+
+    {
+      id: "palestinian-studies",
+      name: "دراسات فلسطينية",
+      englishName: "Palestinian Studies",
+      url: "",
+    },
+
+    {
+      id: "islamic-culture",
+      name: "الثقافة الإسلامية",
+      englishName: "Islamic Culture",
+      url: "",
+    },
+
+    {
+      id: "community-service",
+      name: "خدمة المجتمع والتنمية المستدامة",
+      englishName: "Community Service & Sustainable Development",
+      url: "",
+    },
+
+    {
+      id: "leadership-communication",
+      name: "مهارات قيادة واتصال",
+      englishName: "Leadership & Communication Skills",
+      url: "",
+    },
+
+    {
+      id: "computer-ai-skills",
+      name: "مهارات الحاسوب والذكاء الاصطناعي",
+      englishName: "Computer & AI Skills",
+      url: "",
+    },
+  ],
+
   majors: [
     {
       id: "mechanical-vehicles",

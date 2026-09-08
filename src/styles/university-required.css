@@ -1,0 +1,359 @@
+.university-page {
+  min-height: 100vh;
+
+  background: var(--bg);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.university-hero {
+  padding: 52px 0 58px;
+
+  border-bottom: 1px solid var(--border);
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(231, 178, 61, 0.09),
+      transparent 42%
+    ),
+    var(--bg);
+}
+
+.university-hero-container {
+  max-width: 900px;
+}
+
+.university-back {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 36px;
+
+  padding: 9px 12px;
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  background: var(--card);
+
+  color: var(--text-secondary);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.university-back:hover {
+  background: var(--card-hover);
+
+  color: var(--text);
+
+  border-color: rgba(231, 178, 61, 0.18);
+}
+
+.university-kicker {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--accent);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+}
+
+.university-hero h1 {
+  color: var(--text);
+
+  font-size: clamp(38px, 6vw, 56px);
+  font-weight: 800;
+
+  line-height: 1.25;
+}
+
+.university-hero p {
+  margin-top: 10px;
+
+  color: var(--text-secondary);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   COURSES
+========================================================= */
+
+.university-courses-section {
+  padding: 58px 0 90px;
+}
+
+.university-courses-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+/* =========================================================
+   COURSE CARD
+========================================================= */
+
+.university-course-card {
+  display: grid;
+
+  grid-template-columns:
+    38px
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 12px;
+
+  min-height: 100px;
+
+  padding: 16px;
+
+  border: 1px solid var(--border);
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(231, 178, 61, 0.03),
+      transparent 60%
+    ),
+    var(--card);
+
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.university-course-card:hover {
+  transform: translateY(-2px);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(231, 178, 61, 0.055),
+      transparent 60%
+    ),
+    var(--card-hover);
+
+  border-color: rgba(231, 178, 61, 0.22);
+}
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.university-course-number {
+  display: grid;
+  place-items: center;
+
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  border: 1px solid rgba(231, 178, 61, 0.1);
+  border-radius: 8px;
+
+  background: rgba(231, 178, 61, 0.06);
+
+  color: var(--accent);
+
+  font-family: "Inter", sans-serif;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.university-course-content {
+  min-width: 0;
+}
+
+.university-course-content > span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--muted);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 6.5px;
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+.university-course-content h3 {
+  color: var(--text);
+
+  font-size: 14px;
+  font-weight: 800;
+
+  line-height: 1.45;
+}
+
+/* =========================================================
+   ACTION
+========================================================= */
+
+.university-course-action {
+  display: grid;
+  place-items: center;
+
+  min-width: 34px;
+  height: 34px;
+
+  padding: 0 8px;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  background: rgba(231, 178, 61, 0.07);
+
+  color: var(--accent);
+
+  font-size: 8px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   DISABLED
+========================================================= */
+
+.university-course-card.is-disabled {
+  cursor: default;
+
+  opacity: 0.65;
+}
+
+.university-course-card.is-disabled:hover {
+  transform: none;
+
+  border-color: var(--border);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(231, 178, 61, 0.03),
+      transparent 60%
+    ),
+    var(--card);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .university-courses-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 620px) {
+  .university-hero {
+    padding: 38px 0 44px;
+  }
+
+  .university-back {
+    margin-bottom: 28px;
+  }
+
+  .university-kicker {
+    font-size: 6px;
+
+    letter-spacing: 1.3px;
+  }
+
+  .university-hero h1 {
+    font-size: 34px;
+  }
+
+  .university-hero p {
+    font-size: 10.5px;
+  }
+
+  .university-courses-section {
+    padding: 42px 0 60px;
+  }
+
+  .university-courses-grid {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+  .university-course-card {
+    grid-template-columns:
+      34px
+      minmax(0, 1fr)
+      auto;
+
+    min-height: 84px;
+
+    gap: 10px;
+
+    padding: 13px;
+
+    border-radius: 11px;
+  }
+
+  .university-course-number {
+    width: 34px;
+    height: 34px;
+
+    font-size: 7px;
+  }
+
+  .university-course-content > span {
+    font-size: 5.5px;
+  }
+
+  .university-course-content h3 {
+    font-size: 12px;
+  }
+
+  .university-course-action {
+    min-width: 31px;
+    height: 31px;
+
+    font-size: 7px;
+  }
+}

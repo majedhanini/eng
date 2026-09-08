@@ -1,7 +1,28 @@
-import engineeringData from "../../data/engineeringData";
 import "../../styles/header.css";
 
 function Header({ navigate }) {
+  const goToMajors = () => {
+    navigate("/");
+
+    setTimeout(() => {
+      document.querySelector(".majors-section")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 80);
+  };
+
+  const goToUniversityRequired = () => {
+    navigate("/");
+
+    setTimeout(() => {
+      document.querySelector("#university-required")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 80);
+  };
+
   return (
     <header className="site-header" dir="rtl">
       <div className="container header-container">
@@ -30,17 +51,17 @@ function Header({ navigate }) {
           <button
             type="button"
             className="header-nav-link"
-            onClick={() => {
-              navigate("/");
-
-              setTimeout(() => {
-                document.querySelector(".majors-section")?.scrollIntoView({
-                  behavior: "smooth",
-                });
-              }, 50);
-            }}
+            onClick={goToMajors}
           >
             التخصصات
+          </button>
+
+          <button
+            type="button"
+            className="header-nav-link"
+            onClick={goToUniversityRequired}
+          >
+            إجباري الجامعة
           </button>
         </nav>
       </div>
