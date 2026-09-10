@@ -80,7 +80,7 @@ const engineeringData = {
       id: "arabic-language",
       name: "اللغة العربية",
       englishName: "Arabic Language",
-      url: "",
+      url: "https://chat.whatsapp.com/Jkgs72INAFg0mP810AXp6I?s=cl&p=i&mlu=0&ilr=4",
     },
 
     {
